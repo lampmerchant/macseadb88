@@ -12,6 +12,8 @@ My annotation of the disassembled code is only partially complete.  Anyone who w
 
 The PIC1654S executed one instruction cycle to eight clock ticks, the PIC16F88/87 execute one instruction cycle to four clock ticks, meaning that the external clock cannot be used without extensive changes to the original code.  As such, the adapted code uses the PIC16F88/87's internal oscillator at 2 MHz, which winds up being slightly faster than the PIC1654S driven at ~3.6 MHz.  If this seems to be causing trouble in your setup, see [this](https://github.com/lampmerchant/macseadb88/issues/1) issue for a potential solution.
 
+This implementation is known to fail the Apple TechStep ADB test, per [this](https://github.com/lampmerchant/macseadb88/issues/2) issue, probably due to the clock speed difference.
+
 ## Download
 
 [Click here.](https://github.com/lampmerchant/macseadb88/releases/download/20230122/macseadb88.HEX)
